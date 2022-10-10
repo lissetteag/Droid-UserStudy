@@ -19,7 +19,7 @@ export const Table1 = ({ item }) => {
           {data.map((attribute, i) => (
             <tr key={i}>
               <td>{attribute.itemName}</td>
-              <td>
+              <td class="tooltip"> <span class="tooltiptext">Tooltip</span>
                 <input
                   className="checkInput"
                   type="checkbox"

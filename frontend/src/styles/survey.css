@@ -5,17 +5,17 @@
 
 /******************** Left block ********************/
 .leftBlock {
-    flex: 1.2;
-    /* background-color: aquamarine; */
+    flex: 0.8;
+    background-color: aquamarine; 
 }
 
 .image {
-    width: 385px;
-    height: 40%;
-    display: flex;
+    width: 500px;
+    height: 100%;
+    display: flexbox;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background-color: red;
 }
 
 .description {
@@ -42,13 +42,14 @@
 
 /******************** Right block ********************/
 .rightBlock {
-    flex: 2;
+    flex:2;
     /* background-color: aqua; */
 }
 
-h3 {
-    margin-left: 0rem;
-    margin-bottom: 1rem;
+ul {
+    margin-left: 33rem;
+    margin-bottom: 0rem;
+    font-weight: 500;
 }
 
 .tableRow {

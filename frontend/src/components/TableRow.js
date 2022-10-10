@@ -5,7 +5,6 @@ const TableRow = ({ item }) => {
   return (
     <div className="rowItem">
       <p>{item.itemName}</p>
-
       <div className="checkboxes">
         <input
           className="checkInput"

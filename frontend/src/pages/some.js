@@ -157,32 +157,3 @@ function Survey1() {
 }
 
 export default Survey1;
-
-{/* <br />
-            <TableTitle title="Attributes" />
-            <div className="tableRow">
-              {attributes.map((attribute, i) => (
-                <TableRow item={attribute} key={i} />
-              ))}
-            </div>
-
-            <br />
-            <TableTitle title="Methods" />
-            <div className="tableRow">
-              {methods.map((attribute, i) => (
-                <TableRow item={attribute} key={i} />
-              ))}
-
-            </div>
-            <div className="submi">
-              <h4> Provide here your recommendation</h4>
-              <input
-                type="text"
-                name=""
-                id=""
-                placeholder="Your recommendation"
-              />
-              {page !== 1 && <button onClick={prevPage}>Previous</button>}
-              {page !== 3 && <button onClick={nextPage}>Next</button>}
-              {page === 3 && <button onClick={reset}>Submit</button>}
-            </div> */}

@@ -3,7 +3,6 @@ import { useNavigate, useParams } from "react-router-dom";
 import "../styles/home.css";
 
 import { useAppContext } from "../context/AppContext";
-// import { Table } from "../components/Table";
 
 function Home() {
   const { dispatch } = useAppContext();
@@ -18,36 +17,11 @@ function Home() {
     if (Number(userId)) {
       dispatch({ type: "navigate", value: userId });
       // console.log(state);
-      navigate("/survey");
+      navigate("/instruction/");
     } else {
       alert("Please enter the integer...")
     }
-
-
-
-    // For input
-    // let inputId = inputRef.current.value;
-
-    // if (Number(inputId)) {
-    //   dispatch({ type: "navigate", value: inputId });
-    //   // console.log(state);
-    //   navigate("/survey");
-    // } else {
-    //   alert("Please enter the integer...")
-    // }
-
   };
-
-  // UseContext when using useReducer
-  // const { state, dispatch } = useAppContext();
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   let searchQuery = inputRef.current.value;
-
-  //   dispatch({ type: "add_number", value: searchQuery });
-  //   router.push(`/result`);
-  // };
 
   return (
     <div className="home">
@@ -59,10 +33,7 @@ function Home() {
         according to several quality criteria. This study is scientific and has no economic or commercial purposes.
       </p>
       <form onSubmit={handleSubmit}>
-        {/* <label htmlFor="peas">Enter your ID to proceed: </label>
-        <br />
-        <input className="inputId" type="text" ref={inputRef} />
-        <br /> */}
+        {}
         <button type="submit" className="buttonID">
           Next
         </button>

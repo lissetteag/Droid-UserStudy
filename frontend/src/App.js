@@ -4,6 +4,7 @@ import "./app.css";
 import Header from "./components/Header";
 import Finish from "./pages/Finish";
 import Home from "./pages/Home";
+import Instruction from "./pages/Instruction";
 import Survey from "./pages/Survey";
 
 
@@ -14,6 +15,7 @@ function App() {
         <Header />
         <Routes>
           <Route name="Home" path="/:userId" element={<Home />} />
+          <Route name="Instruction" path="/instruction" element={<Instruction />} />
           <Route name="Survey" path="/survey" element={<Survey />} />
           <Route name="Finish" path="/finish" element={<Finish />} />
         </Routes>

@@ -6,6 +6,7 @@ const Header = ({ name }) => {
   const { state, dispatch } = useAppContext();
   // const navigate = useNavigate();
   let home = state.homeActive;
+  let instruction = state.instructionActive;
   let survey = state.surveyActive;
 
   const alternate = () => {
@@ -30,6 +31,13 @@ const Header = ({ name }) => {
           }}
         >
           Home
+        </Link>
+        |{" "}
+        <Link
+          className={instruction ? "navActive" : "navInstruction"}
+          to={pathname === "/" ? "/" : "/instruction"}
+        >
+          Instruction
         </Link>
         |{" "}
         <Link

@@ -1,6 +1,7 @@
 export const initialState = {
-  id: 2,
+  id: 3,
   homeActive: true,
+  instructionActive: false,
   surveyActive: false,
 };
 
@@ -19,6 +20,7 @@ export const appReducer = (state, action) => {
         ...state,
         id: action.value,
         homeActive: !state.homeActive,
+        instructionActive: !state.instructionActive,
         surveyActive: !state.surveyActive,
       };
 

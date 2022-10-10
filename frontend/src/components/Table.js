@@ -146,48 +146,9 @@ export default function Table({ COLUMNS, useCaseData, param }) {
                             alt="first"
                         />
                     </div>
-                    <div className="description">
-                        <h3>Information</h3>
-                        <br />
-                        <p>
-                            The figure shows a class diagram with a class in blue. This class
-                            is the target class subject to the recommendations. The target
-                            class is the class subject to the recommendations. The other
-                            classes of the class diagram, shown in grey, are the context
-                            information of the target class.
-                        </p>
-                        <br />
-                        <p>
-                            Evaluate the recommended items presented in the list to the right
-                            using the following criteria:
-                        </p>
-                        <ul>
-                            <li>
-                                <b>Correct:</b> The recommended item is correct for the target
-                                class
-                            </li>
-                            <li>
-                                <b>Obvious:</b> The recommended item is an item you could have
-                                easily come up with yourself
-                            </li>
-                            <li>
-                                <b>Redundant:</b> The recommended item exists or is similar to
-                                an existing one
-                            </li>
-                            <li>
-                                <b>Contextualized:</b> The recommended item belongs to the
-                                diagram domain
-                            </li>
-                            <li>
-                                <b>Generalizable:</b> The recommended item is also applicable to
-                                other classes of the diagram
-                            </li>
-                        </ul>
-                    </div>
                 </div>
                 <div className="rightBlock">
                     <div>
-                        <h3>Recommended items</h3>
                         <table  {...getTableProps()}>
                             <thead>
                                 {headerGroups.map(headerGroup => (
@@ -213,12 +174,12 @@ export default function Table({ COLUMNS, useCaseData, param }) {
                             </tbody>
                         </table>
                         <div className="submi">
-                            <h4> Provide here your recommendation</h4>
+                            <h4> If you missed an Attribute or Method for the class in Blue please add it here</h4>
                             <input
                                 type="text"
                                 name=""
                                 id=""
-                                placeholder="Your recommendation"
+                                placeholder="Optional"
                             />
                             <button onClick={() => {
                                 previousPage();
