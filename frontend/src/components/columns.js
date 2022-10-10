@@ -8,6 +8,11 @@ export const getHeaders = (attributes = false) => {
         {
             Header: 'Item-Type',
             accessor: 'itemType',
+            Cell: (props) => {
+                return (
+                    <p style={{ color: "red" }}>{props.value}</p>
+                );
+            }
         },
 
         {

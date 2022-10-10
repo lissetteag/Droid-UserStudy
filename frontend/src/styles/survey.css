@@ -6,7 +6,6 @@
 /******************** Left block ********************/
 .leftBlock {
     flex: 0.8;
-    background-color: aquamarine; 
 }
 
 .image {
@@ -15,7 +14,6 @@
     display: flexbox;
     justify-content: center;
     align-items: center;
-    background-color: red;
 }
 
 .description {
@@ -46,9 +44,9 @@
     /* background-color: aqua; */
 }
 
-ul {
-    margin-left: 33rem;
-    margin-bottom: 0rem;
+.rightBlock .list {
+    margin-left: 1rem;
+    margin-bottom: 2rem;
     font-weight: 500;
 }
 
@@ -56,6 +54,10 @@ ul {
     margin-top: 0.7rem;
 }
 
+.attribute{
+    font-style: italic;
+    font-weight: 600
+}
 
 .submi {
     display: flex;

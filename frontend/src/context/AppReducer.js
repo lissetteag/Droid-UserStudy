@@ -12,20 +12,35 @@ export const appReducer = (state, action) => {
     }
 
     case "navigate": {
-      // state.id = action.value;
-      // state.homeActive = !state.homeActive;
-      // state.surveyActive = !state.surveyActive;
-
       return {
         ...state,
         id: action.value,
-        homeActive: !state.homeActive,
-        instructionActive: !state.instructionActive,
-        surveyActive: !state.surveyActive,
       };
-
-      
     }
-    default: return initialState;
-  } 
+
+    case "instruction": {
+      console.log("hekkio", action);
+      return {
+        ...state,
+        id: action.value,
+        homeActive: false,
+        instructionActive: true,
+        surveyActive: false
+      };
+    }
+
+    case "survey": {
+      console.log("dsdsd");
+      return {
+        ...state,
+        homeActive: false,
+        instructionActive: false,
+        surveyActive: true,
+      };
+    }
+    case "home":
+    default:
+      console.log("22222", action);
+      return initialState;
+  }
 };

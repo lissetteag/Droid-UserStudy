@@ -148,6 +148,13 @@ export default function Table({ COLUMNS, useCaseData, param }) {
                     </div>
                 </div>
                 <div className="rightBlock">
+                    <ul className="list">
+                        <li>Correct: Is acceptable for the class in blue</li>
+                        <li>Obvious: You could have easily come up with yourself</li>
+                        <li>Redundant: exists or is similar to an existing one</li>
+                        <li>Contextualized: It belongs to the diagram domain</li>
+                        <li>Generalizable: Is also applicable to other classes of the diagram</li>
+                    </ul>
                     <div>
                         <table  {...getTableProps()}>
                             <thead>
@@ -166,7 +173,12 @@ export default function Table({ COLUMNS, useCaseData, param }) {
                                         row.original.item ?
                                             <tr {...row.getRowProps()}>
                                                 {row.cells.map((cell, i) => {
-                                                    return <td {...cell.getCellProps()}>{i === 0 || i === 1 ? cell.value : cell.render('Cell')}</td>
+                                                    // console.log(cell.row.original.itemType);
+                                                    return <td  {...cell.getCellProps([
+                                                        {
+                                                            className: cell.row.original.itemType === "Attribute" ? "attribute" : "",
+                                                        },
+                                                    ])}>{i === 0 || i === 1 ? cell.value : cell.render('Cell')}</td>
                                                 })}
                                             </tr> : ''
                                     )

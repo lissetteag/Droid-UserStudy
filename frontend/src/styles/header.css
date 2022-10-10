@@ -7,7 +7,7 @@
 
 /* Droid text */
 .header .img {
-  flex: 1;
+  flex: 2;
 }
 
 /* Navigation text when no hightlighted */
@@ -21,22 +21,30 @@
   color : #3B1342;
 }
 
+.flex-link{
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .navHome {
-  margin-right: 5rem;
+  /* margin-right: 5rem; */
   text-decoration: none;
   color : #3B1342;
 }
 
 /* Instruction button */
 .navInstruction {
-  margin-left: 5rem;
+  /* margin-left: 5rem; */
   text-decoration: none;
   color : #3B1342;
 }
 
 /* Survey button */
 .navSurvey {
-  margin-left: 5rem;
+  /* margin-left: 5rem; */
   text-decoration: none;
   color : #3B1342;
 }
@@ -45,8 +53,8 @@
 .navActive {
   color: #fff;
   background-color: #BF557B;
-  margin-right: 5rem;
-  margin-left: 5rem;
+  /* margin-right: 5rem;
+  margin-left: 5rem; */
   text-decoration: none;
   padding: 0.4rem 0.8rem 0.4rem 0.8rem;
   font-size: 1.5rem;

@@ -15,9 +15,9 @@ function Home() {
     e.preventDefault();
     //For url parameter
     if (Number(userId)) {
-      dispatch({ type: "navigate", value: userId });
+      dispatch({ type: "instruction", value: userId });
       // console.log(state);
-      navigate("/instruction/");
+      navigate("/instruction");
     } else {
       alert("Please enter the integer...")
     }
@@ -33,7 +33,7 @@ function Home() {
         according to several quality criteria. This study is scientific and has no economic or commercial purposes.
       </p>
       <form onSubmit={handleSubmit}>
-        {}
+        { }
         <button type="submit" className="buttonID">
           Next
         </button>
