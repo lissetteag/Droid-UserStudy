@@ -16,7 +16,7 @@
     align-items: center;
 }
 
-.description {
+/* .description {
     font-size: 1.2rem;
     justify-content: space-around;
     text-align: justify;
@@ -36,7 +36,7 @@
 
 .description ul li b {
     font-weight: 500;
-}
+} */
 
 /******************** Right block ********************/
 .rightBlock {

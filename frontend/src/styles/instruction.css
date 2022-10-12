@@ -1,37 +1,50 @@
-.instruction {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: justify;
-    text-justify: inter-word;
-    font-size: 1.4rem;
-  }
-  
-  /*Instruction page paragraph */
-  .instruction p {
-    width: 60%;
-    margin-top: 3rem;
-    margin-bottom: 5rem;
-    font-size: 1.5rem;
-    color: #3B1342;
-  }
-  
-  /* Text holder */
-  .inputId {
-    margin: 1rem 0 1rem 0;
-    padding: 0.6rem;
-    outline: none;
-    font-size: 1.3rem;
-  }
-  
-  /* Next button */
-  .buttonID {
-    color: #fff;
-    background-color: #BF557B;
-    text-decoration: none;
-    padding: 0.38rem 1.5rem;
-    font-size: 1.5rem;
-    border: none;
-    align-items: center;
-  }
+/* The main container */
+.container {
+  display: flex;
+}
+
+/******************** Left block ********************/
+.leftBlock {
+  flex: 0.8;
+}
+
+.image {
+  width: 500px;
+  height: 100%;
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2rem;
+  margin-top: 3rem;
+}
+
+
+/******************** Right block ********************/
+.rightBlock {
+  flex:2;
+}
+
+.rightBlock .instruction {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-weight: 500;
+
+  font-size: 1.5rem;
+  justify-content: space-around;
+  text-align: justify;
+  text-justify: inter-word;
+  width: 90%;
+}
+
+/* Next button */
+.buttonID {
+  color: #fff;
+  background-color: #BF557B;
+  text-decoration: none;
+  padding: 0.38rem 1.5rem;
+  font-size: 1.5rem;
+  border: none;
+  align-items: center;
+  margin-top: 5rem;
+  margin-left: 30rem;
+}
