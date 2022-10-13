@@ -12,9 +12,7 @@
   width: 500px;
   height: 100%;
   display: flexbox;
-  justify-content: center;
-  align-items: center;
-  margin-left: 3rem;
+  margin-left: 2rem;
   margin-top: 3rem;
 }
 
@@ -29,17 +27,11 @@
   margin-bottom: 2rem;
   font-weight: 500;
 
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   justify-content: space-around;
   text-align: justify;
   text-justify: inter-word;
   width: 90%;
-}
-
-.image2 {
-  margin-left: 2rem;
-  justify-content: center;
-  align-items: center;
 }
 
 /* Next button */

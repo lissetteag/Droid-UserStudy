@@ -18,8 +18,10 @@ function Instruction() {
   return (
     <div className="container">
       <div className="leftBlock">
+        <div className="imageBlock">
         <div className="image">
             <img src="\img\cd.png" alt="sample class diagram"></img>
+            </div>
         </div>
       </div>
       <div className="rightBlock">
