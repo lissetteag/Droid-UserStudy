@@ -14,7 +14,7 @@
   display: flexbox;
   justify-content: center;
   align-items: center;
-  margin-left: 2rem;
+  margin-left: 3rem;
   margin-top: 3rem;
 }
 
@@ -36,8 +36,14 @@
   width: 90%;
 }
 
+.image2 {
+  margin-left: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Next button */
-.buttonID {
+.buttonID2 {
   color: #fff;
   background-color: #BF557B;
   text-decoration: none;
@@ -45,6 +51,24 @@
   font-size: 1.5rem;
   border: none;
   align-items: center;
-  margin-top: 5rem;
-  margin-left: 30rem;
+  margin-left: 35rem;
+  margin-top: 2rem;
+}
+
+mark {
+  background-color: rgb(222, 228, 139);
+  color: black;
+  opacity: 0.8;
+}
+
+markTarget {
+  background-color: rgb(90, 215, 224);
+  color: black;
+  opacity: 0.8;
+}
+
+markItem {
+  background-color: rgb(113, 209, 153);
+  color: black;
+  opacity: 0.8;
 }

@@ -149,11 +149,11 @@ export default function Table({ COLUMNS, useCaseData, param }) {
                 </div>
                 <div className="rightBlock">
                     <ul className="list">
-                        <li>Correct: Is acceptable for the class in blue</li>
-                        <li>Obvious: You could have easily come up with yourself</li>
-                        <li>Redundant: exists or is similar to an existing one</li>
-                        <li>Contextualized: It belongs to the diagram domain</li>
-                        <li>Generalizable: Is also applicable to other classes of the diagram</li>
+                        <li>Correct: The recommendation is suitable for the class in blue.</li>
+                        <li>Obvious: The recommendation is an item you could have easily proposed yourself</li>
+                        <li>Redundant: The recommendation exists or is similar to an existing one</li>
+                        <li>Contextualized: The recommendation belongs to the diagram domain</li>
+                        <li>Generalizable: The recommendation is also applicable to other classes of the diagram</li>
                     </ul>
                     <div>
                         <table  {...getTableProps()}>
