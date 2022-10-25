@@ -7,7 +7,7 @@ const Header = () => {
   const { state, dispatch } = useAppContext();
   const navigate = useNavigate();
   let home = state.homeActive;
-  let instruction = state.instructionActive;
+  let example = state.instructionActive;
   let survey = state.surveyActive;
 
   // console.log(home, instruction, survey);
@@ -29,11 +29,11 @@ const Header = () => {
     console.log(name);
     switch (name) {
 
-      case "Instruction":
+      case "Example":
 
         console.log(name);
-        dispatch({ type: "instruction" })
-        navigate("/instruction")
+        dispatch({ type: "example" })
+        navigate("/example")
         break
 
       case "Survey":
@@ -72,11 +72,11 @@ const Header = () => {
           <div>|</div>
 
           <Link
-            className={instruction ? "navActive" : "navInstruction"}
-            to={"/instruction"}
+            className={example ? "navActive" : "navInstruction"}
+            to={"/example"}
             onClick={handleNavigation}
           >
-            Instruction
+            Example
           </Link>
           <div>|</div>
           <Link

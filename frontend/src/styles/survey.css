@@ -86,10 +86,15 @@
 }
 
 .submi button {
+    color: #fff;
+    background-color: #BF557B;
+    text-decoration: none;
+    font-size: 1rem;
+    border: none;
     width: 8rem;
     margin-right: 1rem;
-    font-size: 1rem;
     font-weight: 600;
+
 }
 
 

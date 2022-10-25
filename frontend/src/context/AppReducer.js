@@ -18,7 +18,7 @@ export const appReducer = (state, action) => {
       };
     }
 
-    case "instruction": {
+    case "example": {
       console.log("hekkio", action);
       return {
         ...state,

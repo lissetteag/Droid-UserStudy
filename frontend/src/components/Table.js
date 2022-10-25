@@ -149,11 +149,11 @@ export default function Table({ COLUMNS, useCaseData, param }) {
                 </div>
                 <div className="rightBlock">
                     <ul className="list">
-                        <li>Correct: The recommendation is suitable for the class in blue.</li>
-                        <li>Obvious: The recommendation is an item you could have easily proposed yourself</li>
-                        <li>Redundant: The recommendation exists or is similar to an existing one</li>
-                        <li>Contextualized: The recommendation belongs to the diagram domain</li>
-                        <li>Generalizable: The recommendation is also applicable to other classes of the diagram</li>
+                        <li>Correct: The attribute/method is suitable for the class in blue.</li>
+                        <li>Obvious: The attribute/method you could have easily proposed yourself</li>
+                        <li>Redundant: The attribute/method exists or is similar to an existing one in the diagram</li>
+                        <li>Contextualized: The attribute/method belongs to the diagram domain</li>
+                        <li>Generalizable: The attribute/method is also applicable to other classes of the diagram</li>
                     </ul>
                     <div>
                         <table  {...getTableProps()}>
@@ -186,7 +186,7 @@ export default function Table({ COLUMNS, useCaseData, param }) {
                             </tbody>
                         </table>
                         <div className="submi">
-                            <h4> If you missed an Attribute or Method for the class in Blue please add it here</h4>
+                            <h4> If you missed an attribute or method for the class in Blue please add it here</h4>
                             <input
                                 type="text"
                                 name=""

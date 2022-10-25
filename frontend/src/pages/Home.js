@@ -15,9 +15,9 @@ function Home() {
     e.preventDefault();
     //For url parameter
     if (Number(userId)) {
-      dispatch({ type: "instruction", value: userId });
+      dispatch({ type: "example", value: userId });
       // console.log(state);
-      navigate("/instruction");
+      navigate("/example");
     } else {
       alert("Please enter the integer...")
     }
@@ -29,7 +29,7 @@ function Home() {
       <p>
         This study aims to evaluate recommendations for class diagrams.
         The recommendations are generated with Droid, a model-driven solution to automate the synthesis of recommender systems for modelling languages.
-        Participation in this study is voluntary. During the study, the participants will have to evaluate several items that have been recommended for 3 different class diagrams,
+        Participation in this study is voluntary. During the study, the participants will have to evaluate several items that have been recommended for 6 different class diagrams,
         according to several quality criteria. This study is scientific and has no economic or commercial purposes.
       </p>
       <form onSubmit={handleSubmit}>
