@@ -1,5 +1,5 @@
-import participants from "./ParticipantsWithCaseIDs_final.json";
-import data from "./JSSUserStudyCases_final.json";
+import participants from "./ParticipantsWithCaseIDs.json";
+import data from "./JSSUserStudyCases.json";
 
 
 //Get the cases assigned to the participant 
