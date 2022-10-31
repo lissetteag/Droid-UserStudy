@@ -74,7 +74,9 @@ export const makeData = (data) => {
                 redundant: false,
                 contextualized: false,
                 generalizable: false,
-                photo: d.targetID
+                photo: d.targetID,
+                identifier: d.identifier,
+                placeholder: ""
             }
             newData.push(item)
         } else {
@@ -86,7 +88,9 @@ export const makeData = (data) => {
                 redundant: null,
                 contextualized: null,
                 generalizable: null,
-                caseId: null
+                photo: null,
+                identifier: null,
+                placeholder: ""
             }
             newData.push(item)
         }
