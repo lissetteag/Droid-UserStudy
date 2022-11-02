@@ -103,7 +103,7 @@ export default function Table({ COLUMNS, useCaseData, param }) {
         getRecommendation()
         setData(originalData)
         data.push(recommendations)
-        // console.log(data);
+        console.log(data);
         axios.post('http://localhost:8080/receive', {
             data, param
         })
@@ -111,7 +111,8 @@ export default function Table({ COLUMNS, useCaseData, param }) {
     }
 
     const getRecommendation = () => {
-        recommendations.push({ recommendation: recommendationRef.current.value, pageIndex: pageIndex + 1 });
+        // console.log(page[0].original.photo);
+        recommendations.push({ recommendation: recommendationRef.current.value, photoId: page[0].original.photo });
         recommendationRef.current.value = "";
     }
 

@@ -47,19 +47,19 @@
   margin-top: 2rem;
 }
 
-mark {
+.mark {
   background-color: rgb(222, 228, 139);
   color: black;
   opacity: 0.8;
 }
 
-markTarget {
+.markTarget {
   background-color: rgb(90, 215, 224);
   color: black;
   opacity: 0.8;
 }
 
-markItem {
+.markItem {
   background-color: rgb(239, 247, 170);
   color: black;
   opacity: 0.8;
