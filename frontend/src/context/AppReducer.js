@@ -19,7 +19,7 @@ export const appReducer = (state, action) => {
     }
 
     case "example": {
-      console.log("hekkio", action);
+      // console.log("hekkio", action);
       return {
         ...state,
         id: action.value,
@@ -30,7 +30,7 @@ export const appReducer = (state, action) => {
     }
 
     case "survey": {
-      console.log("dsdsd");
+      // console.log("dsdsd");
       return {
         ...state,
         homeActive: false,

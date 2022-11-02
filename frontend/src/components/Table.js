@@ -8,6 +8,7 @@ import axios from 'axios';
 // import { getUserData, makeData } from "../data/makeData";
 
 import "../styles/table.css";
+import { useRef } from 'react';
 
 // Create an editable cell renderer
 const EditableCell = ({
@@ -50,7 +51,7 @@ const EditableCell = ({
 const defaultColumn = {
     Cell: EditableCell,
 }
-
+const recommendations = []
 // Be sure to pass our updateMyData and the skipPageReset option
 export default function Table({ COLUMNS, useCaseData, param }) {
     // For this example, we're using pagination to illustrate how to stop
@@ -63,6 +64,8 @@ export default function Table({ COLUMNS, useCaseData, param }) {
     const [originalData] = useState(data)
     const [skipPageReset, setSkipPageReset] = useState(false)
     const navigate = useNavigate();
+    const recommendationRef = useRef();
+
 
 
     // We need to keep the table from resetting the pageIndex when we
@@ -97,11 +100,19 @@ export default function Table({ COLUMNS, useCaseData, param }) {
     // Let's add a data resetter
     // illustrate that flow...
     const resetData = () => {
+        getRecommendation()
         setData(originalData)
+        data.push(recommendations)
+        console.log(data);
         axios.post('http://localhost:8080/receive', {
             data, param
         })
         navigate("/Finish")
+    }
+
+    const getRecommendation = () => {
+        recommendations.push({ recommendation: recommendationRef.current.value, pageIndex: pageIndex + 1 });
+        recommendationRef.current.value = "";
     }
 
 
@@ -192,15 +203,18 @@ export default function Table({ COLUMNS, useCaseData, param }) {
                                 name=""
                                 id=""
                                 placeholder="Optional"
+                                ref={recommendationRef}
                             />
                             <button onClick={() => {
                                 previousPage();
+
                             }} disabled={!canPreviousPage}>
                                 Previous
                             </button>
                             {canNextPage ?
                                 <button onClick={(e) => {
                                     nextPage()
+                                    getRecommendation()
                                 }} disabled={!canNextPage}>
                                     Next
                                 </button>

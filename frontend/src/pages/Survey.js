@@ -10,7 +10,7 @@ import "../styles/survey.css";
 
 const Survey = () => {
   const { state } = useAppContext()
-  console.log(state);
+  // console.log(state);
   const ATTRCOL = getHeaders(true)
   const DATA = useMemo(() => makeData(getUserData(state.id)), [])
 

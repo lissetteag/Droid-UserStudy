@@ -26,24 +26,24 @@ const Header = () => {
   const handleNavigation = (e) => {
     e.preventDefault();
     const name = e.target.innerText;
-    console.log(name);
+    // console.log(name);
     switch (name) {
 
       case "Example":
 
-        console.log(name);
+        // console.log(name);
         dispatch({ type: "example" })
         navigate("/example")
         break
 
       case "Survey":
-        console.log(name);
+        // console.log(name);
         dispatch({ type: "survey" })
         navigate("/survey")
         break
 
       default:
-        console.log(name);
+        // console.log(name);
         dispatch({ type: "home" })
         navigate("/")
         break

@@ -5,7 +5,7 @@ import { useAppContext } from "../context/AppContext";
 
 function Instruction() {
   const { state, dispatch } = useAppContext();
-  console.log(state);
+  // console.log(state);
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
