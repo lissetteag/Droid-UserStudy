@@ -84,6 +84,8 @@
 
 .submi input::placeholder {
     font-size: 1rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
 }
 
 .submi button {
@@ -98,6 +100,11 @@
 
 }
 
+.submi select{
+    margin-right: 1rem;
+    font-size: 1rem;
+     background-color: hwb(337 74% 11%);
+}
 
 .radios {
     display: flex;
