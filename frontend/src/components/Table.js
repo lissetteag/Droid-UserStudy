@@ -104,7 +104,7 @@ export default function Table({ COLUMNS, useCaseData, param }) {
         setData(originalData)
         data.push(recommendations)
         console.log(data);
-        axios.post('http://localhost:8080/receive', {
+        axios.post('http://157.230.127.240:8080/receive', {
             data, param
         })
         navigate("/Finish")

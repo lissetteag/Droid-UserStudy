@@ -22,4 +22,10 @@ app.post('/receive', function (req, res) {
     });
 });
 
+
+app.get('/test', (req, res)=> {
+    res.send("Server is live..... on 8080")	
+	
+})
+
 app.listen(8080, () => console.log('listening on port 8080!'));
