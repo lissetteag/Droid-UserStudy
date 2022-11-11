@@ -63,36 +63,114 @@ const mendData = (arr) => {
 
 export const makeData = (data) => {
     let newData = []
-
+    var listOfItems = [];
+    var count = 0;
     for (const d of data) {
-        if (d) {
-            let item = {
-                item: d.itemName,
-                itemType: d.type === "Property" ? "Attribute" : 'Method',
-                correct: false,
-                obvious: false,
-                redundant: false,
-                contextualized: false,
-                generalizable: false,
-                photo: d.targetID,
-                identifier: d.identifier
+        //var listOfItems = [];
+        count++;
+        if (count < 16) {
+            if (d) {
+                if (!listOfItems.includes(d.itemName)) {
+                    listOfItems.push(d.itemName);
+                    let item = {
+                        item: d.itemName,
+                        itemType: d.type === "Property" ? "Attribute" : 'Method',
+                        correct: false,
+                        obvious: false,
+                        redundant: false,
+                        contextualized: false,
+                        generalizable: false,
+                        photo: d.targetID,
+                        identifier: d.identifier,
+                        itemName: d.itemName
+                    }
+                    newData.push(item)
+                } else {
+                    let item = {
+                        item: "",
+                        itemType: d.type === "Property" ? "Attribute" : 'Method',
+                        correct: false,
+                        obvious: false,
+                        redundant: false,
+                        contextualized: false,
+                        generalizable: false,
+                        photo: d.targetID,
+                        identifier: d.identifier,
+                        itemName: d.itemName
+                    }
+                    newData.push(item)
+                }
+
+            } else {
+                let item = {
+                    item: null,
+                    itemType: null,
+                    correct: null,
+                    obvious: null,
+                    redundant: null,
+                    contextualized: null,
+                    generalizable: null,
+                    photo: null,
+                    identifier: null,
+                    itemName:null
+                }
+                newData.push(item)
             }
-            newData.push(item)
         } else {
-            let item = {
-                item: null,
-                itemType: null,
-                correct: null,
-                obvious: null,
-                redundant: null,
-                contextualized: null,
-                generalizable: null,
-                photo: null,
-                identifier: null
+            count = 0;
+            listOfItems = [];
+            if (d) {
+                if (!listOfItems.includes(d.itemName)) {
+                    listOfItems.push(d.itemName);
+                    let item = {
+                        item: d.itemName,
+                        itemType: d.type === "Property" ? "Attribute" : 'Method',
+                        correct: false,
+                        obvious: false,
+                        redundant: false,
+                        contextualized: false,
+                        generalizable: false,
+                        photo: d.targetID,
+                        identifier: d.identifier,
+                        itemName: d.itemName
+                    }
+                    newData.push(item)
+                } else {
+                    let item = {
+                        item: "",
+                        itemType:  d.type === "Property" ? "Attribute" : 'Method',
+                        correct: false,
+                        obvious: false,
+                        redundant: false,
+                        contextualized: false,
+                        generalizable: false,
+                        photo: d.targetID,
+                        identifier: d.identifier,
+                        itemName: d.itemName
+                    }
+                    newData.push(item)
+                }
+
+            } else {
+                let item = {
+                    item: null,
+                    itemType: null,
+                    correct: null,
+                    obvious: null,
+                    redundant: null,
+                    contextualized: null,
+                    generalizable: null,
+                    photo: null,
+                    identifier: null,
+                    itemName: null
+                }
+                newData.push(item)
             }
-            newData.push(item)
+
         }
 
+        console.log(listOfItems);
     }
+
     return newData;
 }

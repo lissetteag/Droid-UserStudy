@@ -52,7 +52,7 @@ const defaultColumn = {
     Cell: EditableCell,
 }
 const recommendations = []
-const confidence = []
+
 // Be sure to pass our updateMyData and the skipPageReset option
 export default function Table({ COLUMNS, useCaseData, param }) {
     // For this example, we're using pagination to illustrate how to stop
@@ -103,10 +103,8 @@ export default function Table({ COLUMNS, useCaseData, param }) {
     // illustrate that flow...
     const resetData = () => {
         getRecommendation()
-        getConfidence()
         setData(originalData)
         data.push(recommendations)
-        data.push(confidence)
         console.log(data);
         //To publish response locally on or the server
         //  axios.post('http://157.230.127.240:8080/receive', {
@@ -119,18 +117,10 @@ export default function Table({ COLUMNS, useCaseData, param }) {
 
     const getRecommendation = () => {
         // console.log(page[0].original.photo);
-        recommendations.push({ recommendation: recommendationRef.current.value, photoId: page[0].original.photo });
+        recommendations.push({ recommendation: recommendationRef.current.value, photoId: page[0].original.photo,  confidence: confidenceRef.current.value});
         recommendationRef.current.value = "";
-    }
-
-
-    const getConfidence = () => {
-        // console.log(page[0].original.photo);
-        confidence.push({ confidence: confidenceRef.current.value, photoId: page[0].original.photo });
         confidenceRef.current.value = "";
     }
-
-
     const {
         getTableProps,
         getTableBodyProps,
@@ -241,7 +231,6 @@ export default function Table({ COLUMNS, useCaseData, param }) {
                                 <button onClick={(e) => {
                                     nextPage()
                                     getRecommendation()
-                                    getConfidence()
                                 }} disabled={!canNextPage}>
                                     Next
                                 </button>
