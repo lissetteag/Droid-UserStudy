@@ -31,15 +31,15 @@ function Example() {
             The figure on the left shows a class diagram under development. The class in <span className="markTarget">blue</span>  is the class under construction. The table below shows possible attributes/methods for the class.
             <br /><br />
             The goal is to fill the table according to the following criteria:
-            <li>Correct: The attribute/method is suitable for the class in blue.</li>
+            <li>Correct: The attribute/method is suitable for the class in blue</li>
             <li>Obvious: The attribute/method you could have easily proposed yourself</li>
             <li>Redundant: The attribute/method exists or is similar to an existing one in the diagram</li>
             <li>Contextualized: The attribute/method belongs to the diagram domain</li>
             <li>Generalizable: The attribute/method is also applicable to other classes of the diagram</li>
             <br />
-            For instance, for the class <span className="markTarget">Customer</span>, the attribute <span className="markItem">id</span> is Correct since is suitable and is Obvious because you could easily propose yourself. <span className="markItem">Id</span> can be Redundant as it exists in the SuperClass Person, is not Contextualized as it is not particular to the domain and is Generalizable as it can be applied to the class Order. On the other hand, the attribute <span className="markItem">balance</span> is Correct since is adequate for the class and is Contextualized because it belongs to the diagram domain.
+            For instance, for the class <span className="markTarget">Customer</span>, the attribute <span className="markItem">id</span> is Correct since is suitable and is Obvious because you could easily propose yourself. <span className="markItem">Id</span> is Redundant as it exists in the SuperClass Person, is not Contextualized as it is not particular to the domain and is Generalizable as it can be applied to the class Order. On the other hand, the method <span className="markItem">getBillingAddress</span> is Correct since is adequate for the class and is Contextualized because it belongs to the diagram domain.
             <br /><br />
-            Afterwords, if you missed an attribute or method relevant to the class <span className="markTarget">Customer</span> you can optionally write it in the text box. For instance,for this case <span className="markItem">accountNumber</span>. Finally, indicate the level of confidence you felt in selecting the attributes and methods for the class in blue.
+            Afterwords, if you missed an attribute or method relevant to the class <span className="markTarget">Customer</span> you can optionally write it in the text box. For instance, for this case <span className="markItem">creditCardNumber</span>. Finally, indicate the level of confidence you felt in selecting the attributes and methods for the class in blue.
           </p>
         </div>
         <div className="image2">

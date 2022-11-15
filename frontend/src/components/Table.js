@@ -68,8 +68,6 @@ export default function Table({ COLUMNS, useCaseData, param }) {
     const recommendationRef = useRef();
     const confidenceRef = useRef();
 
-
-
     // We need to keep the table from resetting the pageIndex when we
     // Update data. So we can keep track of that flag with a ref.
 
@@ -108,7 +106,7 @@ export default function Table({ COLUMNS, useCaseData, param }) {
         console.log(data);
         //To publish response locally on or the server
          axios.post('http://157.230.127.240:8080/receive', {
-        //axios.post('http://localhost:8080/receive', {
+       // axios.post('http://localhost:8080/receive', {
             data, param
         })
 
