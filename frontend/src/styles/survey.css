@@ -58,7 +58,13 @@
 
 .attribute{
     font-style: italic;
-    font-weight: 600
+    font-weight: 600;
+    color:  #3B1342;
+}
+
+.method{
+    font-weight: 600;
+    color:#BF557B
 }
 
 .submi {

@@ -105,8 +105,8 @@ export default function Table({ COLUMNS, useCaseData, param }) {
         data.push(recommendations)
         console.log(data);
         //To publish response locally on or the server
-         axios.post('http://157.230.127.240:8080/receive', {
-       // axios.post('http://localhost:8080/receive', {
+        // axios.post('http://157.230.127.240:8080/receive', {
+        axios.post('http://localhost:8080/receive', {
             data, param
         })
 
@@ -115,9 +115,13 @@ export default function Table({ COLUMNS, useCaseData, param }) {
 
     const getRecommendation = () => {
         // console.log(page[0].original.photo);
-        recommendations.push({ recommendation: recommendationRef.current.value, photoId: page[0].original.photo,  confidence: confidenceRef.current.value});
+        recommendations.push({ recommendation: recommendationRef.current.value, photoId: page[0].original.photo, confidence: confidenceRef.current.value });
         recommendationRef.current.value = "";
-        confidenceRef.current.value = "";
+
+
+        if (confidenceRef.current.value === "Level of confidence") {
+            alert('Please select the level of confidence');
+        }
     }
     const {
         getTableProps,
@@ -156,7 +160,7 @@ export default function Table({ COLUMNS, useCaseData, param }) {
                 <div className="leftBlock">
                     <div className="image">
                         <img
-                            src={`/img/${page[0].original.photo}.png`=== "/img/undefined.png" ? "/img/75.png" : `/img/${page[0].original.photo}.png`}
+                            src={`/img/${page[0].original.photo}.png` === "/img/undefined.png" ? "/img/75.png" : `/img/${page[0].original.photo}.png`}
                             alt="first"
                         />
                     </div>
@@ -187,10 +191,16 @@ export default function Table({ COLUMNS, useCaseData, param }) {
                                         row.original.item ?
                                             <tr {...row.getRowProps()}>
                                                 {row.cells.map((cell, i) => {
-                                                    // console.log(cell.row.original.itemType);
+                                                    
+                                               //     console.log(cell.row.original.itemType);
                                                     return <td  {...cell.getCellProps([
                                                         {
                                                             className: cell.row.original.itemType === "Attribute" ? "attribute" : "",
+                                                            
+                                                        },
+                                                        {
+                                                            className: cell.row.original.itemType === "Method" ? "method" : "",
+                                                            
                                                         },
                                                     ])}>{i === 0 || i === 1 ? cell.value : cell.render('Cell')}</td>
                                                 })}
@@ -208,7 +218,7 @@ export default function Table({ COLUMNS, useCaseData, param }) {
                                 placeholder="Optional"
                                 ref={recommendationRef}
                             />
-                            <select
+                            <select required="required"
                                 name="optionlist"
                                 ref={confidenceRef}
                                 onChange="combo(this, 'demo')">
