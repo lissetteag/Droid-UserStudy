@@ -108,7 +108,7 @@ export default function Table({ COLUMNS, useCaseData, param }) {
         console.log(data);
         //To publish response locally on or the server
          axios.post('http://157.230.127.240:8080/receive', {
-       // axios.post('http://localhost:8080/receive', {
+        //axios.post('http://localhost:8080/receive', {
             data, param
         })
 
@@ -158,7 +158,7 @@ export default function Table({ COLUMNS, useCaseData, param }) {
                 <div className="leftBlock">
                     <div className="image">
                         <img
-                            src={`/img/${page[0].original.photo}.png`}
+                            src={`/img/${page[0].original.photo}.png`=== "/img/undefined.png" ? "/img/75.png" : `/img/${page[0].original.photo}.png`}
                             alt="first"
                         />
                     </div>

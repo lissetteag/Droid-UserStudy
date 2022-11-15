@@ -169,7 +169,7 @@ export const makeData = (data) => {
 
         }
 
-        console.log(listOfItems);
+       // console.log(listOfItems);
     }
 
     return newData;
