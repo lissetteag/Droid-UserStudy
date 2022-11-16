@@ -1,5 +1,5 @@
 //import { useState } from "react";
-import { Link, useNavigate ,useParams} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAppContext } from "../context/AppContext";
 import "../styles/header.css";
 
@@ -11,32 +11,31 @@ const Header = () => {
   let survey = state.surveyActive;
 
   const pathname = window.location.pathname;
-  const { userId } = useParams();
 
   const handleNavigation = (e) => {
     e.preventDefault();
     const name = e.target.innerText;
     switch (name) {
       case "Example":
-        dispatch({ type: "example" , value: userId})
-        navigate("/example")
+        dispatch({ type: "example", value: state.id })
+        navigate("/example/" + state.id)
         break
       case "Survey":
-        dispatch({ type: "survey", value: userId })
-        navigate("/survey")
+        dispatch({ type: "survey", value: state.id })
+        navigate("/survey/" + state.id)
         break
       default:
-        dispatch({ type: "home", value: userId })
-        navigate("/")
+       // dispatch({ type: "home", value: state.id })
+       // navigate("/")
         break
     }
   }
 
   return (
+    
     <div className="header">
       <div className="img"> {/*  onClick={() => navigate("/1")}> */}
-        <img src="gen/default-monochrome-black.svg" height={80} width={200} alt="ygfytfytt" />
-
+        <img src="gen/default-monochrome-black.svg" height={80} width={200} alt="droidLogo" />
       </div>
       {pathname !== "/Finish" && <nav className="nav">
         <div className="flex-link">
@@ -51,7 +50,7 @@ const Header = () => {
 
           <Link
             className={example ? "navActive" : "navInstruction"}
-            to={"/example"}
+            to={"/example/"+ state.id}
             onClick={handleNavigation}
           >
             Example
@@ -59,7 +58,7 @@ const Header = () => {
           <div>|</div>
           <Link
             className={survey ? "navActive" : "navSurvey"}
-            to={"/survey"}
+            to={"/survey/"+ state.id}
             onClick={handleNavigation}
           >
             Survey

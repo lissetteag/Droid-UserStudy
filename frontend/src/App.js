@@ -15,8 +15,8 @@ function App() {
         <Header />
         <Routes>
           <Route name="Home" path="/:userId" element={<Home />} />
-          <Route name="Example" path="/example" element={<Example />} />
-          <Route name="Survey" path="/survey" element={<Survey />} />
+          <Route name="Example" path="/example/:userId" element={<Example />} />
+          <Route name="Survey" path="/survey/:userId" element={<Survey />} />
           <Route name="Finish" path="/finish" element={<Finish />} />
         </Routes>
       </Router>

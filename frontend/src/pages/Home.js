@@ -18,7 +18,7 @@ function Home() {
     if (Number(userId)) {
       dispatch({ type: "example", value: userId });
       // console.log(state);
-      navigate("/example");
+      navigate("/example/" + userId);
     } else {
       alert("Please enter the integer...")
     }

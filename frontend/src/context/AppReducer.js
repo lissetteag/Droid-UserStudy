@@ -1,5 +1,5 @@
 export const initialState = {
-  id: 3,
+ // id: 3,
   homeActive: true,
   instructionActive: false,
   surveyActive: false,
@@ -37,8 +37,16 @@ export const appReducer = (state, action) => {
       };
     }
     case "home":
-    default:
-      console.log("22222", action);
-      return initialState;
+      default:
+      return {
+        ...state,
+        id: action.value,
+        homeActive: true,
+        instructionActive: false,
+        surveyActive: false,
+      };
+    
+     // console.log("22222", action);
+     // return initialState;
   }
 };

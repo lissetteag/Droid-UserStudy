@@ -1,19 +1,20 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "../styles/example.css";
 
 import { useAppContext } from "../context/AppContext";
 
 function Example() {
-  const {dispatch} = useAppContext();
+  const { dispatch } = useAppContext();
   //const { state, dispatch } = useAppContext();
   const navigate = useNavigate();
+  const { userId } = useParams();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch({ type: "survey" });
+    dispatch({ type: "survey", value: userId });
     //For url parameter
-    navigate("/survey");
-   // window.open("/survey", "_blank");
+    navigate("/survey/" + userId);
+    // window.open("/survey", "_blank");
   };
 
   return (
