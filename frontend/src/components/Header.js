@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+//import { useState } from "react";
+import { Link, useNavigate ,useParams} from "react-router-dom";
 import { useAppContext } from "../context/AppContext";
 import "../styles/header.css";
 
@@ -10,48 +10,27 @@ const Header = () => {
   let example = state.instructionActive;
   let survey = state.surveyActive;
 
-  // console.log(home, instruction, survey);
-  // const [home, setHome] = useState(false)
-  // const [instruction, setInstruction] = useState(false)
-  // const [survey, setSurvey] = useState(false)
-
-  // const alternate = () => {
-  //   dispatch({ type: "navigate" });
-  // };
-
   const pathname = window.location.pathname;
-
-
+  const { userId } = useParams();
 
   const handleNavigation = (e) => {
     e.preventDefault();
     const name = e.target.innerText;
-    // console.log(name);
     switch (name) {
-
       case "Example":
-
-        // console.log(name);
-        dispatch({ type: "example" })
+        dispatch({ type: "example" , value: userId})
         navigate("/example")
         break
-
       case "Survey":
-        // console.log(name);
-        dispatch({ type: "survey" })
+        dispatch({ type: "survey", value: userId })
         navigate("/survey")
         break
-
       default:
-        // console.log(name);
-        dispatch({ type: "home" })
+        dispatch({ type: "home", value: userId })
         navigate("/")
         break
     }
   }
-
-  // console.log(state);
-
 
   return (
     <div className="header">
@@ -60,7 +39,6 @@ const Header = () => {
 
       </div>
       {pathname !== "/Finish" && <nav className="nav">
-
         <div className="flex-link">
           <Link
             className={home ? "navActive" : "navHome"}
@@ -87,9 +65,6 @@ const Header = () => {
             Survey
           </Link>
         </div>
-
-
-
       </nav>}
     </div>
   );

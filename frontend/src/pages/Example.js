@@ -4,8 +4,8 @@ import "../styles/example.css";
 import { useAppContext } from "../context/AppContext";
 
 function Example() {
-  const { state, dispatch } = useAppContext();
-  // console.log(state);
+  const {dispatch} = useAppContext();
+  //const { state, dispatch } = useAppContext();
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -13,6 +13,7 @@ function Example() {
     dispatch({ type: "survey" });
     //For url parameter
     navigate("/survey");
+   // window.open("/survey", "_blank");
   };
 
   return (

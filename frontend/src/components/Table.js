@@ -24,19 +24,6 @@ const EditableCell = ({
         setValue(initialValue)
     }, [initialValue])
 
-    // // If the initialValue is changed external, sync it up with our state
-    // const onChange = e => {
-    //     setValue(e.target.checked);
-    //     updateMyData(index, id, value)
-    // }
-
-    // // We'll only update the external data when the input is blurred
-    // const onBlur = () => {
-    //     updateMyData(index, id, value)
-    // }
-
-
-
     return <input
         type="checkbox"
         defaultChecked={value}
@@ -55,10 +42,9 @@ const recommendations = []
 
 // Be sure to pass our updateMyData and the skipPageReset option
 export default function Table({ COLUMNS, useCaseData, param }) {
-    // For this example, we're using pagination to illustrate how to stop
+    // For this example, here using pagination to illustrate how to stop
     // the current page from resetting when our data changes
     // Otherwise, nothing is different here.
-
 
     const columns = useMemo(() => COLUMNS, [])
     const [data, setData] = useState(useCaseData)
@@ -88,6 +74,7 @@ export default function Table({ COLUMNS, useCaseData, param }) {
                 return row
             })
         )
+
     }
 
     // After data CHANGES, we turn the flag back off
@@ -103,9 +90,10 @@ export default function Table({ COLUMNS, useCaseData, param }) {
         getRecommendation()
         setData(originalData)
         data.push(recommendations)
-        console.log(data);
+
         //To publish response locally on or the server
         // axios.post('http://157.230.127.240:8080/receive', {
+
         axios.post('http://localhost:8080/receive', {
             data, param
         })
@@ -119,9 +107,9 @@ export default function Table({ COLUMNS, useCaseData, param }) {
         recommendationRef.current.value = "";
 
 
-        if (confidenceRef.current.value === "Level of confidence") {
-            alert('Please select the level of confidence');
-        }
+        //  if (confidenceRef.current.value === "Level of confidence") {
+        //     alert('Please select the level of confidence');
+        // }
     }
     const {
         getTableProps,
@@ -145,10 +133,11 @@ export default function Table({ COLUMNS, useCaseData, param }) {
         // // use the skipPageReset option to disable page resetting temporarily
         autoResetPage: !skipPageReset,
         initialState: { pageSize: 15 },
+
         // // updateMyData isn't part of the API, but
-        // // anything we put into these options will
+        // // anything is put into these options will
         // // automatically be available on the instance.
-        // // That way we can call this function from our
+        // // That way it can call this function from the
         // // cell renderer!
         updateMyData,
     }, usePagination)
@@ -191,16 +180,16 @@ export default function Table({ COLUMNS, useCaseData, param }) {
                                         row.original.item ?
                                             <tr {...row.getRowProps()}>
                                                 {row.cells.map((cell, i) => {
-                                                    
-                                               //     console.log(cell.row.original.itemType);
+
+                                                    //     console.log(cell.row.original.itemType);
                                                     return <td  {...cell.getCellProps([
                                                         {
                                                             className: cell.row.original.itemType === "Attribute" ? "attribute" : "",
-                                                            
+
                                                         },
                                                         {
                                                             className: cell.row.original.itemType === "Method" ? "method" : "",
-                                                            
+
                                                         },
                                                     ])}>{i === 0 || i === 1 ? cell.value : cell.render('Cell')}</td>
                                                 })}
@@ -237,12 +226,24 @@ export default function Table({ COLUMNS, useCaseData, param }) {
                             </button>
                             {canNextPage ?
                                 <button onClick={(e) => {
-                                    nextPage()
-                                    getRecommendation()
+                                    if (confidenceRef.current.value === "Level of confidence") {
+                                        alert('Please select the level of confidence');
+                                    } else {
+                                        nextPage()
+                                        getRecommendation()
+                                        confidenceRef.current.value = "Level of confidence"
+                                    }
+
                                 }} disabled={!canNextPage}>
                                     Next
                                 </button>
-                                : <button onClick={resetData}>Submit</button>
+                                : <button onClick={(e) => {
+                                    if (confidenceRef.current.value === "Level of confidence") {
+                                        alert('Please select the level of confidence');
+                                    } else {
+                                        resetData()
+                                    }
+                                }}>Submit</button>
                             }
                             <span>
                                 <strong>

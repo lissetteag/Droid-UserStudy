@@ -1,4 +1,5 @@
-import React, { useRef } from "react";
+import React from "react";
+//import React, { useRef } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import "../styles/home.css";
 
@@ -7,7 +8,7 @@ import { useAppContext } from "../context/AppContext";
 function Home() {
   const { dispatch } = useAppContext();
   const navigate = useNavigate();
-  const inputRef = useRef();
+  //const inputRef = useRef();
   const { userId } = useParams();
 
 
