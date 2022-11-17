@@ -25,8 +25,8 @@ const Header = () => {
         navigate("/survey/" + state.id)
         break
       default:
-       // dispatch({ type: "home", value: state.id })
-       // navigate("/")
+        dispatch({ type: "home", value: state.id })
+        navigate("/"+ state.id)
         break
     }
   }
