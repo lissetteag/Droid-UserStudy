@@ -157,7 +157,7 @@ export default function Table({ COLUMNS, useCaseData, param }) {
                 <div className="rightBlock">
                     <ul className="list">
                         <li>Correct: The attribute/method is suitable for the class in blue.</li>
-                        <li>Obvious: The attribute/method you could have easily proposed yourself</li>
+                        <li>Obvious: The attribute/method could have easily been proposed by yourself</li>
                         <li>Redundant: The attribute/method exists or is similar to an existing one in the diagram</li>
                         <li>Contextualized: The attribute/method belongs to the diagram domain</li>
                         <li>Generalizable: The attribute/method is also applicable to other classes of the diagram</li>
@@ -199,14 +199,7 @@ export default function Table({ COLUMNS, useCaseData, param }) {
                             </tbody>
                         </table>
                         <div className="submi">
-                            <h4> If you missed an attribute or method for the class in Blue please add it here</h4>
-                            <input
-                                type="text"
-                                name=""
-                                id=""
-                                placeholder="Optional"
-                                ref={recommendationRef}
-                            />
+
                             <select required="required"
                                 name="optionlist"
                                 ref={confidenceRef}
@@ -218,6 +211,14 @@ export default function Table({ COLUMNS, useCaseData, param }) {
                                 <option>Slightly confident</option>
                                 <option>Not confident at all</option>
                             </select>
+                            <h4> If you missed an attribute or method for the class in Blue please add it here</h4>
+                            <input
+                                type="text"
+                                name=""
+                                id=""
+                                placeholder="Optional"
+                                ref={recommendationRef}
+                            />
                             <button onClick={() => {
                                 previousPage();
 

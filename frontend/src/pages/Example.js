@@ -34,7 +34,7 @@ function Example() {
             <br /><br />
             The goal is to fill the table according to the following criteria:
             <li>Correct: The attribute/method is suitable for the class in blue</li>
-            <li>Obvious: The attribute/method you could have easily proposed yourself</li>
+            <li>Obvious: The attribute/method could have easily been proposed by yourself</li>
             <li>Redundant: The attribute/method exists or is similar to an existing one in the diagram</li>
             <li>Contextualized: The attribute/method belongs to the diagram domain</li>
             <li>Generalizable: The attribute/method is also applicable to other classes of the diagram</li>
