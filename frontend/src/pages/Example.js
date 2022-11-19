@@ -27,9 +27,10 @@ function Example() {
         </div>
       </div>
       <div className="rightBlock">
-        <h1>Example</h1>
+        <h1>Example </h1>
         <div className="example">
           <p>
+            This page shows an example of how to perform the user study. You can read the exercise or watch this instructional <a href="https://youtu.be/_edKFsZb2rc" rel="noreferrer" target="_blank">video</a>.
             The figure on the left shows a class diagram under development. The class in <span className="markTarget">blue</span>  is the class under construction. The table below shows possible attributes/methods for the class.
             <br /><br />
             The goal is to fill the table according to the following criteria:
@@ -41,7 +42,7 @@ function Example() {
             <br />
             For instance, for the class <span className="markTarget">Customer</span>, the attribute <span className="markItem">id</span> is Correct since is suitable and is Obvious because you could easily propose yourself. <span className="markItem">Id</span> is Redundant as it exists in the SuperClass Person, is not Contextualized as it is not particular to the domain and is Generalizable as it can be applied to the class Order. On the other hand, the method <span className="markItem">getBillingAddress</span> is Correct since is adequate for the class and is Contextualized because it belongs to the diagram domain.
             <br /><br />
-            Afterwords, indicate the level of confidence you felt in selecting the attributes and methods for the class in blue. Finally, if you missed an attribute or method relevant to the class <span className="markTarget">Customer</span> you can optionally write it in the text box. For instance, for this case <span className="markItem">creditCardNumber</span>.
+            Afterwards, indicate the level of confidence you felt in selecting the attributes and methods for the class in blue. Finally, if you missed an attribute or method relevant to the class <span className="markTarget">Customer</span> you can optionally write it in the text box. For instance, in this case, <span className="markItem">creditCardNumber</span>.
           </p>
         </div>
         <div className="image2">

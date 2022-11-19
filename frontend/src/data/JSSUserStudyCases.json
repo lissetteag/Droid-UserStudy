@@ -3169,34 +3169,6 @@
     "recID": 75
   },
   {
-    "itemID": 2051,
-    "score": 0.25,
-    "identifier": "2503sectionsoperationCB",
-    "targetName": "dashboard",
-    "itemName": "getBillingAddress",
-    "targetID": 452,
-    "method": "CB",
-    "caseID": 41,
-    "domain": "education",
-    "ranking": 3,
-    "type": "Operation",
-    "recID": 78
-  },
-  {
-    "itemID": 1029,
-    "score": 0.2,
-    "identifier": "1481feedbackResultoperationCB",
-    "targetName": "dashboard",
-    "itemName": "feedbackResult",
-    "targetID": 452,
-    "method": "CB",
-    "caseID": 41,
-    "domain": "education",
-    "ranking": 4,
-    "type": "Operation",
-    "recID": 79
-  },
-  {
     "itemID": 1449,
     "score": 1,
     "identifier": "1901moduleNamepropertyCBUB",
@@ -3267,18 +3239,18 @@
     "recID": 59
   },
   {
-    "itemID": 1138,
+    "itemID": 1156,
     "score": 0.2,
-    "identifier": "1590giveExamoperationCBUB",
+    "identifier": "1608gradepropertyItemPop",
     "targetName": "dashboard",
-    "itemName": "giveExam",
+    "itemName": "grade",
     "targetID": 452,
-    "method": "CBUB",
+    "method": "ItemPop",
     "caseID": 41,
     "domain": "education",
     "ranking": 4,
-    "type": "Operation",
-    "recID": 60
+    "type": "Property",
+    "recID": 79
   },
   {
     "itemID": 277,
@@ -3337,17 +3309,45 @@
     "recID": 258
   },
   {
-    "itemID": 1156,
+    "itemID": 1138,
     "score": 0.2,
-    "identifier": "1608gradepropertyItemPop",
+    "identifier": "1590giveExamoperationCBUB",
     "targetName": "dashboard",
-    "itemName": "grade",
+    "itemName": "giveExam",
     "targetID": 452,
-    "method": "ItemPop",
+    "method": "CBUB",
     "caseID": 41,
     "domain": "education",
     "ranking": 4,
-    "type": "Property",
+    "type": "Operation",
+    "recID": 60
+  },
+  {
+    "itemID": 2051,
+    "score": 0.25,
+    "identifier": "2503sectionsoperationCB",
+    "targetName": "dashboard",
+    "itemName": "getBillingAddress",
+    "targetID": 452,
+    "method": "CB",
+    "caseID": 41,
+    "domain": "education",
+    "ranking": 3,
+    "type": "Operation",
+    "recID": 78
+  },
+  {
+    "itemID": 1029,
+    "score": 0.2,
+    "identifier": "1481feedbackResultoperationCB",
+    "targetName": "dashboard",
+    "itemName": "feedbackResult",
+    "targetID": 452,
+    "method": "CB",
+    "caseID": 41,
+    "domain": "education",
+    "ranking": 4,
+    "type": "Operation",
     "recID": 79
   },
   {
@@ -3379,34 +3379,6 @@
     "recID": 67
   },
   {
-    "itemID": 2051,
-    "score": 0.25,
-    "identifier": "3245sectionsoperationCB",
-    "targetName": "professor",
-    "itemName": "sections",
-    "targetID": 1194,
-    "method": "CB",
-    "caseID": 43,
-    "domain": "education",
-    "ranking": 3,
-    "type": "Operation",
-    "recID": 68
-  },
-  {
-    "itemID": 1029,
-    "score": 0.2,
-    "identifier": "2223feedbackResultoperationCB",
-    "targetName": "professor",
-    "itemName": "feedbackResult",
-    "targetID": 1194,
-    "method": "CB",
-    "caseID": 43,
-    "domain": "education",
-    "ranking": 4,
-    "type": "Operation",
-    "recID": 69
-  },
-  {
     "itemID": 2004,
     "score": 1,
     "identifier": "3198salarypropertyCBUB",
@@ -3433,20 +3405,7 @@
     "ranking": 0,
     "type": "Property",
     "recID": 65
-  },  {
-    "itemID": 631,
-    "score": 1,
-    "identifier": "1825courseDateoperationItemPop",
-    "targetName": "professor",
-    "itemName": "courseDate",
-    "targetID": 1194,
-    "method": "ItemPop",
-    "caseID": 43,
-    "domain": "education",
-    "ranking": 0,
-    "type": "Operation",
-    "recID": 65
-  },
+  },  
   {
     "itemID": 277,
     "score": 1,
@@ -3532,6 +3491,20 @@
     "recID": 87
   },
   {
+    "itemID": 1781,
+    "score": 0.33,
+    "identifier": "2975professorspropertyItemPop",
+    "targetName": "professor",
+    "itemName": "professors",
+    "targetID": 1194,
+    "method": "ItemPop",
+    "caseID": 43,
+    "domain": "education",
+    "ranking": 3,
+    "type": "Property",
+    "recID": 67
+  },
+  {
     "itemID": 630,
     "score": 0.25,
     "identifier": "1824courseCatalogoperationCBUB",
@@ -3546,18 +3519,46 @@
     "recID": 245
   },
   {
-    "itemID": 1781,
-    "score": 0.33,
-    "identifier": "2975professorspropertyItemPop",
+    "itemID": 631,
+    "score": 1,
+    "identifier": "1825courseDateoperationItemPop",
     "targetName": "professor",
-    "itemName": "professors",
+    "itemName": "courseDate",
     "targetID": 1194,
     "method": "ItemPop",
     "caseID": 43,
     "domain": "education",
+    "ranking": 0,
+    "type": "Operation",
+    "recID": 65
+  },
+  {
+    "itemID": 2051,
+    "score": 0.25,
+    "identifier": "3245sectionsoperationCB",
+    "targetName": "professor",
+    "itemName": "sections",
+    "targetID": 1194,
+    "method": "CB",
+    "caseID": 43,
+    "domain": "education",
     "ranking": 3,
-    "type": "Property",
-    "recID": 67
+    "type": "Operation",
+    "recID": 68
+  },
+  {
+    "itemID": 1029,
+    "score": 0.2,
+    "identifier": "2223feedbackResultoperationCB",
+    "targetName": "professor",
+    "itemName": "feedbackResult",
+    "targetID": 1194,
+    "method": "CB",
+    "caseID": 43,
+    "domain": "education",
+    "ranking": 4,
+    "type": "Operation",
+    "recID": 69
   },
   {
     "itemID": 796,
@@ -3644,34 +3645,6 @@
     "recID": 37
   },
   {
-    "itemID": 2051,
-    "score": 0.25,
-    "identifier": "3161sectionsoperationCB",
-    "targetName": "person",
-    "itemName": "sections",
-    "targetID": 1110,
-    "method": "CB",
-    "caseID": 47,
-    "domain": "education",
-    "ranking": 3,
-    "type": "Operation",
-    "recID": 38
-  },
-  {
-    "itemID": 1269,
-    "score": 1,
-    "identifier": "2379instructoroperationCBUB",
-    "targetName": "person",
-    "itemName": "instructor",
-    "targetID": 1110,
-    "method": "CBUB",
-    "caseID": 47,
-    "domain": "education",
-    "ranking": 1,
-    "type": "Operation",
-    "recID": 414
-  },
-  {
     "itemID": 1556,
     "score": 0.5,
     "identifier": "2666numberOfSeatspropertyCBUB",
@@ -3728,6 +3701,20 @@
     "recID": 36
   },
   {
+    "itemID": 1758,
+    "score": 0.25,
+    "identifier": "2868professorNamepropertyItemPop",
+    "targetName": "person",
+    "itemName": "professorName",
+    "targetID": 1110,
+    "method": "ItemPop",
+    "caseID": 47,
+    "domain": "education",
+    "ranking": 4,
+    "type": "Property",
+    "recID": 218
+  },
+  {
     "itemID": 630,
     "score": 0.33,
     "identifier": "1740courseCatalogoperationItemPop",
@@ -3742,6 +3729,34 @@
     "recID": 37
   },
   {
+    "itemID": 2051,
+    "score": 0.25,
+    "identifier": "3161sectionsoperationCB",
+    "targetName": "person",
+    "itemName": "sections",
+    "targetID": 1110,
+    "method": "CB",
+    "caseID": 47,
+    "domain": "education",
+    "ranking": 3,
+    "type": "Operation",
+    "recID": 38
+  },
+  {
+    "itemID": 1269,
+    "score": 1,
+    "identifier": "2379instructoroperationCBUB",
+    "targetName": "person",
+    "itemName": "instructor",
+    "targetID": 1110,
+    "method": "CBUB",
+    "caseID": 47,
+    "domain": "education",
+    "ranking": 1,
+    "type": "Operation",
+    "recID": 414
+  },
+  {
     "itemID": 1826,
     "score": 0.33,
     "identifier": "2936ratingoperationItemPop",
@@ -3754,20 +3769,6 @@
     "ranking": 2,
     "type": "Operation",
     "recID": 217
-  },
-  {
-    "itemID": 1758,
-    "score": 0.25,
-    "identifier": "2868professorNamepropertyItemPop",
-    "targetName": "person",
-    "itemName": "professorName",
-    "targetID": 1110,
-    "method": "ItemPop",
-    "caseID": 47,
-    "domain": "education",
-    "ranking": 4,
-    "type": "Property",
-    "recID": 218
   },
   {
     "itemID": 631,
@@ -4428,20 +4429,6 @@
     "recID": 345
   },
   {
-    "itemID": 630,
-    "score": 0.33,
-    "identifier": "1705courseCatalogoperationCBUB",
-    "targetName": "professor",
-    "itemName": "courseCatalog",
-    "targetID": 1075,
-    "method": "CBUB",
-    "caseID": 46,
-    "domain": "education",
-    "ranking": 3,
-    "type": "Operation",
-    "recID": 156
-  },
-  {
     "itemID": 1454,
     "score": 0.25,
     "identifier": "2529monthpropertyCBUB",
@@ -4498,20 +4485,6 @@
     "recID": 348
   },
   {
-    "itemID": 630,
-    "score": 0.25,
-    "identifier": "1705courseCatalogoperationItemPop",
-    "targetName": "professor",
-    "itemName": "courseCatalog",
-    "targetID": 1075,
-    "method": "ItemPop",
-    "caseID": 46,
-    "domain": "education",
-    "ranking": 3,
-    "type": "Operation",
-    "recID": 843
-  },
-  {
     "itemID": 2049,
     "score": 0.5,
     "identifier": "3124sectionIdpropertyCB",
@@ -4524,6 +4497,20 @@
     "ranking": 1,
     "type": "Property",
     "recID": 346
+  },
+  {
+    "itemID": 1926,
+    "score": 0.5,
+    "identifier": "3001resourceIdpropertyCBUB",
+    "targetName": "professor",
+    "itemName": "resourceId",
+    "targetID": 1075,
+    "method": "CBUB",
+    "caseID": 46,
+    "domain": "education",
+    "ranking": 1,
+    "type": "Property",
+    "recID": 105
   },
   {
     "itemID": 2050,
@@ -4582,18 +4569,32 @@
     "recID": 104
   },
   {
-    "itemID": 1926,
-    "score": 0.5,
-    "identifier": "3001resourceIdpropertyCBUB",
+    "itemID": 630,
+    "score": 0.25,
+    "identifier": "1705courseCatalogoperationItemPop",
     "targetName": "professor",
-    "itemName": "resourceId",
+    "itemName": "courseCatalog",
+    "targetID": 1075,
+    "method": "ItemPop",
+    "caseID": 46,
+    "domain": "education",
+    "ranking": 3,
+    "type": "Operation",
+    "recID": 843
+  },
+  {
+    "itemID": 630,
+    "score": 0.33,
+    "identifier": "1705courseCatalogoperationCBUB",
+    "targetName": "professor",
+    "itemName": "courseCatalog",
     "targetID": 1075,
     "method": "CBUB",
     "caseID": 46,
     "domain": "education",
-    "ranking": 1,
-    "type": "Property",
-    "recID": 105
+    "ranking": 3,
+    "type": "Operation",
+    "recID": 156
   },
   {
     "itemID": 1402,
@@ -6402,20 +6403,6 @@
     "recID": 136
   },
   {
-    "itemID": 1001,
-    "score": 0.5,
-    "identifier": "2301finesoperationCBUB",
-    "targetName": "person",
-    "itemName": "fines",
-    "targetID": 1300,
-    "method": "CBUB",
-    "caseID": 6,
-    "domain": "literature",
-    "ranking": 2,
-    "type": "Operation",
-    "recID": 199
-  },
-  {
     "itemID": 1262,
     "score": 0.33,
     "identifier": "2562issueNumpropertyCBUB",
@@ -6442,20 +6429,6 @@
     "ranking": 4,
     "type": "Property",
     "recID": 200
-  },
-  {
-    "itemID": 989,
-    "score": 1,
-    "identifier": "2289findBookoperationItemPop",
-    "targetName": "person",
-    "itemName": "findBook",
-    "targetID": 1300,
-    "method": "ItemPop",
-    "caseID": 6,
-    "domain": "literature",
-    "ranking": 0,
-    "type": "Operation",
-    "recID": 250
   },
   {
     "itemID": 966,
@@ -6512,6 +6485,34 @@
     "ranking": 4,
     "type": "Operation",
     "recID": 254
+  },
+  {
+    "itemID": 989,
+    "score": 1,
+    "identifier": "2289findBookoperationItemPop",
+    "targetName": "person",
+    "itemName": "findBook",
+    "targetID": 1300,
+    "method": "ItemPop",
+    "caseID": 6,
+    "domain": "literature",
+    "ranking": 0,
+    "type": "Operation",
+    "recID": 250
+  },
+  {
+    "itemID": 1001,
+    "score": 0.5,
+    "identifier": "2301finesoperationCBUB",
+    "targetName": "person",
+    "itemName": "fines",
+    "targetID": 1300,
+    "method": "CBUB",
+    "caseID": 6,
+    "domain": "literature",
+    "ranking": 2,
+    "type": "Operation",
+    "recID": 199
   },
   {
     "itemID": 1030,
