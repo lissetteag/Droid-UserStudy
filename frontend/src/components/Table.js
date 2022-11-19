@@ -41,11 +41,13 @@ const defaultColumn = {
 const recommendations = []
 
 // Be sure to pass our updateMyData and the skipPageReset option
-export default function Table({ COLUMNS, useCaseData, param }) {
+export default function Table({ COLUMNS, useCaseData, param}) {
     // For this example, here using pagination to illustrate how to stop
     // the current page from resetting when our data changes
     // Otherwise, nothing is different here.
 
+    let start = Date.now();
+    let timestapStart = new Date();
     const columns = useMemo(() => COLUMNS, [])
     const [data, setData] = useState(useCaseData)
     const [originalData] = useState(data)
@@ -74,7 +76,6 @@ export default function Table({ COLUMNS, useCaseData, param }) {
                 return row
             })
         )
-
     }
 
     // After data CHANGES, we turn the flag back off
@@ -92,9 +93,9 @@ export default function Table({ COLUMNS, useCaseData, param }) {
         data.push(recommendations)
 
         //To publish response locally on or the server
-        axios.post('http://157.230.127.240:8080/receive', {
+         axios.post('http://157.230.127.240:8080/receive', {
 
-       // axios.post('http://localhost:8080/receive', {
+      // axios.post('http://localhost:8080/receive', {
             data, param
         })
 
@@ -102,15 +103,19 @@ export default function Table({ COLUMNS, useCaseData, param }) {
     }
 
     const getRecommendation = () => {
-        // console.log(page[0].original.photo);
-        recommendations.push({ recommendation: recommendationRef.current.value, photoId: page[0].original.photo, confidence: confidenceRef.current.value });
+        console.log("next")
+        const total = Date.now() - start;
+        let finalTime = Math.floor(total / 1000);
+        console.log("finalTime: " + finalTime)
+        let currentDateFinal = new Date();
+        recommendations.push({ recommendation: recommendationRef.current.value, photoId: page[0].original.photo, confidence: confidenceRef.current.value, time: finalTime, timestampStart: timestapStart, timestampEnd: currentDateFinal.toISOString() });
         recommendationRef.current.value = "";
 
-
-        //  if (confidenceRef.current.value === "Level of confidence") {
-        //     alert('Please select the level of confidence');
-        // }
+        start = Date.now();
+        timestapStart = new Date(); 
+        currentDateFinal = new Date();
     }
+
     const {
         getTableProps,
         getTableBodyProps,
@@ -133,7 +138,6 @@ export default function Table({ COLUMNS, useCaseData, param }) {
         // // use the skipPageReset option to disable page resetting temporarily
         autoResetPage: !skipPageReset,
         initialState: { pageSize: 15 },
-
         // // updateMyData isn't part of the API, but
         // // anything is put into these options will
         // // automatically be available on the instance.
@@ -180,16 +184,12 @@ export default function Table({ COLUMNS, useCaseData, param }) {
                                         row.original.item ?
                                             <tr {...row.getRowProps()}>
                                                 {row.cells.map((cell, i) => {
-
-                                                    //     console.log(cell.row.original.itemType);
                                                     return <td  {...cell.getCellProps([
                                                         {
                                                             className: cell.row.original.itemType === "Attribute" ? "attribute" : "",
-
                                                         },
                                                         {
                                                             className: cell.row.original.itemType === "Method" ? "method" : "",
-
                                                         },
                                                     ])}>{i === 0 || i === 1 ? cell.value : cell.render('Cell')}</td>
                                                 })}
@@ -199,7 +199,6 @@ export default function Table({ COLUMNS, useCaseData, param }) {
                             </tbody>
                         </table>
                         <div className="submi">
-
                             <select required="required"
                                 name="optionlist"
                                 ref={confidenceRef}
@@ -221,7 +220,6 @@ export default function Table({ COLUMNS, useCaseData, param }) {
                             />
                             <button onClick={() => {
                                 previousPage();
-
                             }} disabled={!canPreviousPage}>
                                 Previous
                             </button>
@@ -234,7 +232,6 @@ export default function Table({ COLUMNS, useCaseData, param }) {
                                         getRecommendation()
                                         confidenceRef.current.value = "Level of confidence"
                                     }
-
                                 }} disabled={!canNextPage}>
                                     Next
                                 </button>

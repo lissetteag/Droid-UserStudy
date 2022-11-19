@@ -41,7 +41,7 @@ function Example() {
             <br />
             For instance, for the class <span className="markTarget">Customer</span>, the attribute <span className="markItem">id</span> is Correct since is suitable and is Obvious because you could easily propose yourself. <span className="markItem">Id</span> is Redundant as it exists in the SuperClass Person, is not Contextualized as it is not particular to the domain and is Generalizable as it can be applied to the class Order. On the other hand, the method <span className="markItem">getBillingAddress</span> is Correct since is adequate for the class and is Contextualized because it belongs to the diagram domain.
             <br /><br />
-            Afterwords, if you missed an attribute or method relevant to the class <span className="markTarget">Customer</span> you can optionally write it in the text box. For instance, for this case <span className="markItem">creditCardNumber</span>. Finally, indicate the level of confidence you felt in selecting the attributes and methods for the class in blue.
+            Afterwords, indicate the level of confidence you felt in selecting the attributes and methods for the class in blue. Finally, if you missed an attribute or method relevant to the class <span className="markTarget">Customer</span> you can optionally write it in the text box. For instance, for this case <span className="markItem">creditCardNumber</span>.
           </p>
         </div>
         <div className="image2">

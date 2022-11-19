@@ -10,10 +10,10 @@ import "../styles/survey.css";
 
 const Survey = () => {
   const { state } = useAppContext()
-  // console.log(state);
   const ATTRCOL = getHeaders(true)
   const DATA = useMemo(() => makeData(getUserData(state.id)), [])
-
+ 
+  console.log('starting timer...');
   return (
     <div className="app">
       <div className="header">
@@ -28,7 +28,7 @@ const Survey = () => {
           </div> */}
         </div>
       </div>
-      <Table COLUMNS={ATTRCOL} useCaseData={DATA} param={state} />
+      <Table COLUMNS={ATTRCOL} useCaseData={DATA} param={state}/>
     </div>
   );
 }
