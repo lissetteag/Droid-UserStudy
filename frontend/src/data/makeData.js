@@ -4,13 +4,15 @@ import data from "./JSSUserStudyCases.json";
 
 //Get the cases assigned to the participant 
 export function getUserData(participant_id) {
-    //Get the id cases for the participant such as [6,34, 41]
-    const caseIds = participants[participant_id ? participant_id : 0]["caseID"];
-    
+    //Get the id cases for the participant
+    console.log("participant_id:  " + participant_id)
+
+    const parIdInew = participant_id -1 ;
+    const caseIds = participants[parIdInew ? parIdInew : 0]["caseID"];
+    console.log("caseIds:  " + caseIds)
     let dataArr = []
     let dataArray = [];
 
-    //Get the cases for the cases id ( [6,34, 41] )
     // We iterate over the cases in the case list above example
     for (const caseId of caseIds) {
         let extArr = data.filter((d) => d.caseID === caseId);

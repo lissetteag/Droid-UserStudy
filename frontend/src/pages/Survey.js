@@ -12,8 +12,6 @@ const Survey = () => {
   const { state } = useAppContext()
   const ATTRCOL = getHeaders(true)
   const DATA = useMemo(() => makeData(getUserData(state.id)), [])
- 
-  console.log('starting timer...');
   return (
     <div className="app">
       <div className="header">
